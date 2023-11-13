@@ -2,8 +2,14 @@ import {Router} from "express";
 
 const router = Router();
 
-router.get("/", (req, res) => res.json({message: "Hello world"}))
+router.get("/", (req, res) => {
+    console.log("HELLO_WORLD 200\n")
+    res.json({message: "Hello world"})
+})
 
-router.get("/health", (req, res) => res.status(200).json({message: "Everything is good here"}))
+router.get("/health", (req, res) => {
+    console.log("HEALTH 200\n")
+    res.status(200).json({message: "Everything is good here"})
+})
 
 export default router;
